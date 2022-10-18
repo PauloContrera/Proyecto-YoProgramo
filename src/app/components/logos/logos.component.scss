@@ -1,0 +1,24 @@
+.row {
+  // background-color: #414345fa;
+    background-color: transparent;
+  .container {
+  height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        display: flex;
+        align-items: center;
+        img {
+            width: 150px;
+          }
+    }
+    .redes {
+      img {
+        padding-right: 1em;
+        width: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.row {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  .principal {
+    background-color: blue;
+    width: 40%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .texto{
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+
+    }
+    img {
+      border-radius: 25%;
+      height: 200px;
+    }
+
+  }
+
+  .secundario {
+    background-color: red;
+    width: 40%;
+  }
+}
