@@ -5,11 +5,14 @@
             <img src="../../../assets/logos/LogosInti.png" id="logo">
         </div>
         <div class="redes">
-            <a href="/login"><img src="../../../assets/logos/linkein.png" id="linkedin"></a>
-            <a href="/login"><img src="../../../assets/logos/github.png" id="linkedin"></a>
-            <a href="/login"><img src="../../../assets/logos/facebook.png" id="linkedin"></a>
-            <a href="/login"><img src="../../../assets/logos/twiter.png" id="linkedin"></a>
+            <a href=""><img src="../../../assets/logos/linkein.png" id="linkedin"></a>
+            <a href=""><img src="../../../assets/logos/github.png" id="linkedin"></a>
+            <a href=""><img src="../../../assets/logos/facebook.png" id="linkedin"></a>
+            <a href=""><img src="../../../assets/logos/twiter.png" id="linkedin"></a>
+            
 
+            <button type="button" *ngIf="!isLogged"><a href="/Login">INICIAR </a></button>
+            <button type="button" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
         </div>
     </div>
 </div>

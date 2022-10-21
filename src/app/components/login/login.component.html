@@ -1,0 +1,11 @@
+<div class="login-total">
+    <form #ngForm (ngSubmit)="onLogin()" novalidate>
+        <h3>Login</h3>
+        <label for="username">Usuario</label>
+        <input type="text" type="email" placeholder="Nombre" id="nombreUsuario" name="nombreUsuario" 
+        [(ngModel)]="nombreUsuario" required >
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="password"[(ngModel)]="password" required>
+        <button class="button">Log In</button>
+    </form>
+</div>

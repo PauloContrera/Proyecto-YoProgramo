@@ -11,6 +11,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { LogosComponent } from './components/logos/logos.component';
 import { HomeComponent } from './components/home/home.component';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor';
+import { NuevaExperienciaComponent } from './components/experiencia/nueva-experiencia/nueva-experiencia.component';
+import { EditarExperienciaComponent } from './components/experiencia/editar-experiencia/editar-experiencia.component';
 
 
 @NgModule({
@@ -22,14 +27,21 @@ import {HttpClientModule} from '@angular/common/http';
     ExperienciaComponent,
     HeaderComponent,
     LogosComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    NuevaExperienciaComponent,
+    EditarExperienciaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
