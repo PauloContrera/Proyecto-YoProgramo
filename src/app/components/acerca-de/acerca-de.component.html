@@ -1,21 +1,22 @@
-<div class="row">
+<div class="acerca-de-mi">
+  <div class="titulo">
+    <h2>Acerca de mi</h2>
+    <button *ngIf="isLogged"  routerLink="/ediAcerca/1">
+      <img src="../../../assets/logos/editar.png" alt="">
+    </button>
+  </div>
+
   <div class="principal">
     <div class="foto">
-    <img src="../../../assets/perfil.jpeg">
+      <img src="{{persona.img}}">
     </div>
     <div class="texto">
-      <div class="nombre">
-        <p>{{persona.nombre}}</p>
-        <p>{{persona.apellido}}</p>
-      </div>
+      <p class="nombre">{{persona.nombre}}</p>
+      <div class="texto-extra">
+        <p>{{persona.texto}}</p>
+      <p>{{persona.texto2}}</p>
       <p>Full Stack Developer Jr</p>
+      </div>
     </div>
-  </div>
-  <div class="secundario">
-    <span>
-      <h1>Acerca de mí</h1>
-      <p>Soy un estudiante avanzado de Ingeniera Electronica en la UTN FRM. Actualmente me estoy capacitando en
-        desarrollo web y tengo experiencia en las ramas de electricidad y electrónica.</p>
-    </span>
   </div>
 </div>

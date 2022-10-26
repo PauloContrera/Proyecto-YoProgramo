@@ -5,11 +5,11 @@ import { Experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
-  selector: 'app-nueva-experiencia',
-  templateUrl: './nueva-experiencia.component.html',
-  styleUrls: ['./nueva-experiencia.component.scss']
+  selector: 'app-nueva-educacion',
+  templateUrl: './nueva-educacion.component.html',
+  styleUrls: ['./nueva-educacion.component.scss']
 })
-export class NuevaExperienciaComponent implements OnInit {
+export class NuevaEducacionComponent implements OnInit {
 
   nombre: string = '';
   lugar: string = '';

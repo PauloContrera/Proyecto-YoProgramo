@@ -5,11 +5,11 @@ import { Experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
-  selector: 'app-editar-experiencia',
-  templateUrl: './editar-experiencia.component.html',
-  styleUrls: ['./editar-experiencia.component.scss']
+  selector: 'app-editar-educacion',
+  templateUrl: './editar-educacion.component.html',
+  styleUrls: ['./editar-educacion.component.scss']
 })
-export class EditarExperienciaComponent implements OnInit {
+export class EditarEducacionComponent implements OnInit {
   expLab!: Experiencia;
 
   constructor(private experiencia: ExperienciaService, private activatedRouter: ActivatedRoute,

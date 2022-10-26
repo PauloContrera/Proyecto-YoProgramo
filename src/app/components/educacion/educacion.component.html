@@ -1,1 +1,55 @@
-<p>educacion works!</p>
+<div class="experiencia">
+    <div class="titulo">
+      <h2>Experiencia laboral</h2>
+  <button type="button" routerLink="/nuevaexp" *ngIf="isLogged">
+    <img src="../../../assets/logos/agregar.png" alt="">
+  </button>
+    </div>
+  <div>
+    <table class="table">
+      <tbody>
+        <tr class="tabla" *ngFor="let Experiencia of expe">
+          <div class="menu">
+            <td *ngIf="isLogged">
+              <button routerLink="/editexp/{{Experiencia.id}}">
+                <img src="../../../assets/logos/editar.png" alt=""></button>
+            </td>
+            <td *ngIf="isLogged">
+              <button (click)="delete(Experiencia.id)">
+                <img src="../../../assets/logos/borrar.png" alt=""></button>
+            </td>
+          </div>
+          <div class="contenido">
+            <img src="{{Experiencia.img}}" alt="">
+
+            <div class="contenidoTexto">
+              <h3 class="titulo">
+                {{Experiencia.nombre}}
+              </h3>
+              <h4 class="texto">
+                {{Experiencia.texto}}
+              </h4>
+              <div class="fechas">
+                {{Experiencia.desde}}
+                <p>-</p>
+                {{Experiencia.hasta}}
+              </div>
+              <h5 class="lugar">
+                {{Experiencia.lugar}}
+              </h5>
+
+            </div>
+
+
+          </div>
+        </tr>
+
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+
+</div>

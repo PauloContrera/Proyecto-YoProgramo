@@ -8,7 +8,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  URL = environment.URL + 'explab/';
+  URL = environment.URL + 'ExpLab/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -16,19 +16,19 @@ export class ExperienciaService {
     return this.httpClient.get<Experiencia[]>(this.URL + 'lista');
   }
 
-  public detail(id: number): Observable<Experiencia>{
-    return this.httpClient.get<Experiencia>(this.URL + `detail/${id}`);
+  public individual(id: number): Observable<Experiencia>{
+    return this.httpClient.get<Experiencia>(this.URL + `individual/${id}`);
   } 
 
-  public save(experiencia: Experiencia): Observable<any>{
-    return this.httpClient.post<any>(this.URL + 'create', experiencia);
+  public crear(experiencia: Experiencia): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'crear', experiencia);
   }
 
-  public update(id: number, experiencia: Experiencia): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update/${id}`, experiencia);
+  public actualizar(id: number, experiencia: Experiencia): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `actualizar/${id}`, experiencia);
   }
 
-  public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+  public borrar(id: number): Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `borrar/${id}`);
   }
 }

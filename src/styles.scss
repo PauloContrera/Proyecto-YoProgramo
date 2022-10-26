@@ -2,3 +2,12 @@
     margin: 0;
     padding: 0;
 }
+body {
+    --color1: rgba(65, 67, 69, 0);
+   --color2: rgba(65, 67, 69, 0);
+    background: var(--color1); background: -webkit-linear-gradient(to right, var(--color1), var(--color2)); 
+    background: linear-gradient(to right, var(--color1), var(--color2)), url("./assets/placa-vectorizada.svg"); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat ;
+}

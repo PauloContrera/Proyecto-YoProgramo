@@ -3,11 +3,12 @@
 
     margin-top: -90px;
     padding: 0px;
-   --color1: rgba(65, 67, 69, 0.98);
-   --color2: rgba(65, 67, 69, 0.98);
-    background: var(--color1); background: -webkit-linear-gradient(to right, var(--color1), var(--color2)); 
-    background: linear-gradient(to right, var(--color1), var(--color2)), url("../../../assets/placa-vectorizada.svg"); 
-    background-size: cover;
+--color1: rgba(65, 67, 69, 0.98);
+//    --color2: rgba(65, 67, 69, 0.98);
+//     background: var(--color1); background: -webkit-linear-gradient(to right, var(--color1), var(--color2)); 
+//     background: linear-gradient(to right, var(--color1), var(--color2)), url("../../../assets/placa-vectorizada.svg"); 
+    background-color: var(--color1);
+background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat ;
     // background-attachment: fixed;

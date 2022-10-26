@@ -1,26 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/service/persona.service';
 import { Loading, Notify } from 'notiflix';
-import { Experiencia } from 'src/app/model/experiencia';
-import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
-  selector: 'app-editar-experiencia',
-  templateUrl: './editar-experiencia.component.html',
-  styleUrls: ['./editar-experiencia.component.scss']
+  selector: 'app-editar-acerca-de',
+  templateUrl: './editar-acerca-de.component.html',
+  styleUrls: ['./editar-acerca-de.component.scss']
 })
-export class EditarExperienciaComponent implements OnInit {
-  expLab!: Experiencia;
+export class EditarAcercaDeComponent implements OnInit {
+  personaEditar!: persona;
 
-  constructor(private experiencia: ExperienciaService, private activatedRouter: ActivatedRoute,
+  constructor(public personaService: PersonaService, private activatedRouter: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit(): void {
     Loading.standard('Cargando...');
+
     const id = this.activatedRouter.snapshot.params['id'];
-    this.experiencia.individual(id).subscribe(
+    this.personaService.getPersona().subscribe(
       data =>{
-        this.expLab = data;
+        this.personaEditar = data;
         Loading.remove();
 
       }, err =>{
@@ -34,19 +35,21 @@ export class EditarExperienciaComponent implements OnInit {
 
   onUpdate(): void{
     Loading.standard('Cargando...');
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.experiencia.actualizar(id, this.expLab).subscribe(
+    
+    const id =1;
+    console.log(this.personaEditar)
+    this.personaService.actualizar(this.personaEditar).subscribe(
       data => {
-        Notify.success('¡Operación exitosa!');
         this.router.navigate(['']);
         Loading.remove();
+        Notify.success('¡Operación exitosa!');
+
       }, err =>{
         Notify.failure('¡Ups! Algo salió mal');
-
          this.router.navigate(['']);
-         Loading.remove();
+        Loading.remove();
+
       }
     )
   }
-
 }
