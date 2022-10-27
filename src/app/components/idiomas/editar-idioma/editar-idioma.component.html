@@ -1,0 +1,64 @@
+
+<div class="total">
+    <div class="titulo">
+        <h2>Editar Idioma</h2>
+    </div>
+  <div class="nuevo">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <div class="nuevo-contenido">
+        <div class="subcontenido">
+            <div>
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" [(ngModel)]="idioma.nombre" required>
+            </div>
+          <div class="subcontenido">            
+            <div>
+              <label for="nombre">Valor:</label>
+              <input type="range"  id="Valor" name="Valor" [(ngModel)]="idioma.valor" required>
+              <input type="text"  id="Valor" name="Valor" [(ngModel)]="idioma.valor" required>
+            </div>
+          </div>
+      </div>
+      <div class="boton">
+        <button>
+            Editar
+          </button>
+      </div>
+    </div>
+      
+    </form>
+
+  </div>
+  <div class="idiomas" >
+     
+    <div class="contenido-circulos" >
+        
+          <div class="circulos">
+            <circle-progress 
+            [percent]="(idioma.valor)" 
+            [radius]="90" [imageSrc]="''" 
+            [title]="(idioma.nombre)"
+            [titleColor]="'#f3f3f3'"
+            [showTitle]="true" 
+            [showImage]="false" 
+            [imageHeight]="70" 
+            [imageWidth]="70" 
+            [showUnits]="false"
+            [showSubtitle]="false" 
+            [outerStrokeWidth]="16" 
+            [innerStrokeWidth]="2" 
+            [outerStrokeColor]="'#f3f3f3'"
+            [innerStrokeColor]="'#f3f3f3'" 
+            [animation]="true" 
+            [animationDuration]="600">
+            </circle-progress>
+          </div>
+        
+    </div>
+     
+
+</div>
+
+
+
+</div>

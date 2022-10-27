@@ -1,19 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { Experiencia } from 'src/app/model/experiencia';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Idioma } from 'src/app/model/idioma';
 import { TokenService } from 'src/app/service/token.service';
-import { ExperienciaService } from 'src/app/service/experiencia.service';
+import { IdiomasService } from 'src/app/service/idiomas.service';
 import { Confirm, Loading, Notify } from 'notiflix';
 
 @Component({
-  selector: 'app-experiencia',
-  templateUrl: './experiencia.component.html',
-  styleUrls: ['./experiencia.component.scss']
+  selector: 'app-idiomas',
+  templateUrl: './idiomas.component.html',
+  styleUrls: ['./idiomas.component.scss']
 })
-export class ExperienciaComponent implements OnInit {
+export class IdiomasComponent implements OnInit {
 
-  expe: Experiencia[] = [];
+  
+  idioma: Idioma[] = [];
 
-  constructor(private experienciaS: ExperienciaService, private tokenService: TokenService) { }
+  constructor(private idiomasS: IdiomasService, private tokenService: TokenService) { }
 
   isLogged = false;
 
@@ -24,12 +25,12 @@ export class ExperienciaComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
-    console.log(this.expe);
+    console.log(this.idioma);
   }
   
 
   cargarExperiencia(): void {
-    this.experienciaS.lista().subscribe(data => { this.expe = data; })
+    this.idiomasS.lista().subscribe(data => { this.idioma = data; })
   }
 
   delete(id?: number){
@@ -41,7 +42,7 @@ export class ExperienciaComponent implements OnInit {
       'Si',
       'No',
       () => { if(id != undefined){
-        this.experienciaS.borrar(id).subscribe(
+        this.idiomasS.borrar(id).subscribe(
           
           data => {
             this.cargarExperiencia();

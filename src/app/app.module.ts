@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,16 @@ import { EditarExperienciaComponent } from './components/experiencia/editar-expe
 import { EditarAcercaDeComponent } from './components/acerca-de/editar-acerca-de/editar-acerca-de.component';
 import { EditarEducacionComponent } from './components/educacion/editar-educacion/editar-educacion.component';
 import { NuevaEducacionComponent } from './components/educacion/nueva-educacion/nueva-educacion.component';
+import { CursosComponent } from './components/cursos/cursos.component';
+import { EditarCursosComponent } from './components/cursos/editar-cursos/editar-cursos.component';
+import { NuevoCursosComponent } from './components/cursos/nuevo-cursos/nuevo-cursos.component';
+import { HabilidadesComponent } from './components/habilidades/habilidades.component';
+import { SwiperModule } from 'swiper/angular';
+import { NuevaHabilidadComponent } from './components/habilidades/nueva-habilidad/nueva-habilidad.component';
+import { EditarHabilidadComponent } from './components/habilidades/editar-habilidad/editar-habilidad.component';
+import { IdiomasComponent } from './components/idiomas/idiomas.component';
+import { NuevoIdiomaComponent } from './components/idiomas/nuevo-idioma/nuevo-idioma.component';
+import { EditarIdiomaComponent } from './components/idiomas/editar-idioma/editar-idioma.component';
 
 
 @NgModule({
@@ -36,13 +47,25 @@ import { NuevaEducacionComponent } from './components/educacion/nueva-educacion/
     EditarExperienciaComponent,
     EditarAcercaDeComponent,
     EditarEducacionComponent,
-    NuevaEducacionComponent
+    NuevaEducacionComponent,
+    CursosComponent,
+    EditarCursosComponent,
+    NuevoCursosComponent,
+    HabilidadesComponent,
+    NuevaHabilidadComponent,
+    EditarHabilidadComponent,
+    IdiomasComponent,
+    NuevoIdiomaComponent,
+    EditarIdiomaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    SwiperModule,
+    NgCircleProgressModule.forRoot({}),
+    
 
   ],
   providers: [

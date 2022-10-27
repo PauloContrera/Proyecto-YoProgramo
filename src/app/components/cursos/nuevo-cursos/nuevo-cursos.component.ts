@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Loading, Notify } from 'notiflix';
-import { Educacion } from 'src/app/model/educacion';
-import { EducacionService } from 'src/app/service/educacion.service';
+import {  Cursos} from 'src/app/model/cursos';
+import {  CursosService} from 'src/app/service/cursos.service';
 
 @Component({
-  selector: 'app-nueva-educacion',
-  templateUrl: './nueva-educacion.component.html',
-  styleUrls: ['./nueva-educacion.component.scss']
+  selector: 'app-nuevo-cursos',
+  templateUrl: './nuevo-cursos.component.html',
+  styleUrls: ['./nuevo-cursos.component.scss']
 })
-export class NuevaEducacionComponent implements OnInit {
-
+export class NuevoCursosComponent implements OnInit {
+ 
   nombre: string = '';
   lugar: string = '';
   desde: string = ''; 
@@ -18,7 +18,7 @@ export class NuevaEducacionComponent implements OnInit {
   texto: string = ''; 
   img: string = ''; 
 
-  constructor(private educacionS: EducacionService, private router: Router) { }
+  constructor(private educacionS: CursosService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +26,7 @@ export class NuevaEducacionComponent implements OnInit {
   onCreate(): void {
     Loading.standard('Cargando...');
     
-    const educacion = new Educacion(
+    const cursos = new Cursos(
                                   this.nombre,
                                   this.lugar,
                                   this.desde,
@@ -34,7 +34,7 @@ export class NuevaEducacionComponent implements OnInit {
                                   this.texto,
                                   this.img,
                                   );
-    this.educacionS.crear(educacion).subscribe(
+    this.educacionS.crear(cursos).subscribe(
       data => {
         Notify.success('¡Operación exitosa!');
 

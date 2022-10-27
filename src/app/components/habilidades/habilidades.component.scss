@@ -1,0 +1,131 @@
+@import "~swiper/css";
+@import "~swiper/css/effect-coverflow";
+@import "~swiper/css/pagination";
+
+/*
+&Variables*/
+
+*{
+  --tamano:100px;
+  --tamano2: calc(var(--tamano)*2);
+  --color1: rgba(65, 67, 69, 1);
+
+}
+.habilidades-totales{
+  
+
+    color: #f3f3f3;
+    background-color: var(--color1);
+}
+
+.color{
+  height:10em
+}
+p{
+  transform:translateY(1em);
+  transition: 0.5s;    
+
+}
+.text{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  font-weight: 0.7em;
+}
+.titulo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0em 0em 1em 0em;
+  font-family: 'Open Sans', sans-serif;
+font-size: 1.5em;
+  button{
+      margin: 0em 0em 0em 1em;
+      background-color: transparent;
+      border: none;
+      img{
+          height: 50px;
+      }
+  }
+}
+
+.habilidades{
+  margin: 0em 0em;
+  padding: 0em 10em;
+
+  h2{
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1em;
+}
+  }
+.apilar{
+  display: flex;
+  flex-direction: column;
+   justify-content: center;
+    align-items: center;
+    .menu{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      button{
+          background-color: transparent;
+          border: none;
+          img{
+              height: 20px;
+              width: 20px;
+
+          }
+      }
+  }
+}
+span.text{
+transform:translateY(-1em);
+z-index: -1;
+opacity: 0;
+}
+.apilar:hover span{
+  transform:translateY(1em);
+  opacity: 1;
+  transition: 0.5s;    
+}
+
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+z-index: 1;
+  
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: var(--tamano2);
+  height: var(--tamano1);
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .swiper-slide img {
+    width: var(--tamano);
+    height: var(--tamano);
+    display: block;
+}
+
+
+@media screen and (max-width: 550px){
+
+.titulo{
+            
+  font-size: 1.2em;
+      button{
+          margin: 0em 0em 0em 1em;
+          img{
+              height: 50px;
+          }
+      }
+
+  }}

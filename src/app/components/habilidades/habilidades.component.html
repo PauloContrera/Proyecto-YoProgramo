@@ -1,0 +1,43 @@
+<div class="habilidades-totales">
+  <div class="titulo">
+    <h2>Habilidades</h2>
+  <button type="button" routerLink="/nuevaHabilidad" *ngIf="isLogged">
+  <img src="../../../assets/logos/agregar.png" alt="">
+  </button>
+  </div>
+  
+  <div class="habilidades">
+    <!-- *Importar en app-modulo.ts el SwiperModule -->
+    <swiper [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="'auto'" [loop]="true"
+      [coverflowEffect]="{
+            rotate: 20,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: false
+          }"
+           [autoplay]="{
+            delay: 1500,
+            disableOnInteraction: false
+          }" [pagination]="{
+            clickable: true
+          }" class="mySwiper">
+      <ng-template swiperSlide *ngFor="let habilidad of habilidades">
+        <div class="apilar"><div class="menu">
+          <td *ngIf="isLogged">
+            <button routerLink="/editarHabilidad/{{habilidad.id}}">
+              <img src="../../../assets/logos/editar.png" alt=""></button>
+          </td>
+          <td *ngIf="isLogged">
+            <button (click)="delete(habilidad.id)">
+              <img src="../../../assets/logos/borrar.png" alt=""></button>
+          </td>
+        </div>
+          <img src="{{habilidad.img}}" alt="">
+          <span class="text">{{habilidad.nombre}}</span>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+  
+</div>

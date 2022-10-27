@@ -1,0 +1,73 @@
+
+<div class="total">
+    <div class="titulo">
+        <h2>Editar Cursos</h2>
+    </div>
+  <div class="nuevo">
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+      <div class="nuevo-contenido">
+        <div class="subcontenido">
+            <div>
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" [(ngModel)]="cursos.nombre" required>
+            </div>
+            <div>
+              <label for="nombre">Subtitulo:</label>
+              <input type="text" id="texto" name="texto" [(ngModel)]="cursos.texto" required>
+            </div>
+            <div>
+                <label for="nombre">Lugar:</label>
+                <input type="text" id="lugar" name="lugar" [(ngModel)]="cursos.lugar" required>
+              </div>
+          </div>
+          <div class="subcontenido">
+            <div>
+                <label for="nombre">Desde:</label>
+                <input type="text" id="desde" name="desde" [(ngModel)]="cursos.desde" required>
+              </div>
+            <div>
+              <label for="nombre">Hasta:</label>
+              <input type="text" id="hasta" name="hasta" [(ngModel)]="cursos.hasta" required>
+            </div>
+            
+            <div>
+              <label for="nombre">Img:</label>
+              <input type="text" id="img" name="img" [(ngModel)]="cursos.img" required>
+            </div>
+          </div>
+      </div>
+      <div class="boton">
+        <button>
+            Editar
+          </button>
+      </div>
+      
+    </form>
+  
+  </div>
+  <div class="contenido">
+    <div class="contenido-imagen">
+      <img src="{{cursos.img}}" alt="">
+  
+    </div>
+  
+    <div class="contenidoTexto">
+      <h3 class="titulo">
+        {{cursos.nombre}}
+      </h3>
+      <h4 class="texto">
+        {{cursos.texto}}
+      </h4>
+      <div class="fechas">
+        {{cursos.desde}}
+        <p>-</p>
+        {{cursos.hasta}}
+      </div>
+      <h5 class="lugar">
+        {{cursos.lugar}}
+      </h5>
+  
+    </div>
+  
+  </div>
+  

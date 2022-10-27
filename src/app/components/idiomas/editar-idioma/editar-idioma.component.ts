@@ -1,26 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Loading, Notify } from 'notiflix';
-import { Educacion } from 'src/app/model/educacion';
-import { EducacionService } from 'src/app/service/educacion.service';
+import { Idioma} from 'src/app/model/idioma';
+import { IdiomasService } from 'src/app/service/idiomas.service';
 
 @Component({
-  selector: 'app-editar-educacion',
-  templateUrl: './editar-educacion.component.html',
-  styleUrls: ['./editar-educacion.component.scss']
+  selector: 'app-editar-idioma',
+  templateUrl: './editar-idioma.component.html',
+  styleUrls: ['./editar-idioma.component.scss']
 })
-export class EditarEducacionComponent implements OnInit {
-  educacion!: Educacion;
+export class EditarIdiomaComponent implements OnInit {
 
-  constructor(private educacionS: EducacionService, private activatedRouter: ActivatedRoute,
+  idioma!: Idioma;
+
+  constructor(private idiomasS: IdiomasService, private activatedRouter: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit(): void {
     Loading.standard('Cargando...');
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionS.individual(id).subscribe(
+    this.idiomasS.individual(id).subscribe(
       data =>{
-        this.educacion = data;
+        this.idioma = data;
         Loading.remove();
 
       }, err =>{
@@ -35,7 +36,7 @@ export class EditarEducacionComponent implements OnInit {
   onUpdate(): void{
     Loading.standard('Cargando...');
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionS.actualizar(id, this.educacion).subscribe(
+    this.idiomasS.actualizar(id, this.idioma).subscribe(
       data => {
         Notify.success('¡Operación exitosa!');
         this.router.navigate(['']);
@@ -48,5 +49,4 @@ export class EditarEducacionComponent implements OnInit {
       }
     )
   }
-
 }
