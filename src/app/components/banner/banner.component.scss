@@ -73,3 +73,13 @@ div:hover.abajo{
         font-size: 2em;
     }
 }
+@media screen and (max-width: 300px){
+    .nombre-completo{
+        font-size: 1.7em;
+    }
+}
+@media screen and (max-width: 260px){
+    .nombre-completo{
+        font-size: 1.5em;
+    }
+}

@@ -255,3 +255,21 @@
   }
    
 }
+
+@media screen and (max-width: 550px){
+
+  .proyectos-total{
+    .titulo{
+              
+      font-size: 1.2em;
+          button{
+              margin: 0em 0em 0em 1em;
+              img{
+                  height: 50px;
+              }
+          }
+      }
+  }
+  
+  
+  }
