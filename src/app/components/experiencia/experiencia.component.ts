@@ -11,9 +11,9 @@ import { Confirm, Loading, Notify } from 'notiflix';
 })
 export class ExperienciaComponent implements OnInit {
 
-  expe: Experiencia[] = [];
+  experiencia: Experiencia[] = [];
 
-  constructor(private experienciaS: ExperienciaService, private tokenService: TokenService) { }
+  constructor(private experienciaS: ExperienciaService, private tokenService: TokenService) {}
 
   isLogged = false;
 
@@ -24,45 +24,45 @@ export class ExperienciaComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
-    console.log(this.expe);
   }
-  
+
 
   cargarExperiencia(): void {
-    this.experienciaS.lista().subscribe(data => { this.expe = data; })
+    this.experienciaS.lista().subscribe(data => {
+      this.experiencia = data;
+    })
   }
 
-  delete(id?: number){
+  delete(id ? : number) {
     Loading.standard('Cargando...');
-    
+
     Confirm.show(
       '¡Advertencia!',
       'Desea borrar este componente',
       'Si',
       'No',
-      () => { if(id != undefined){
-        this.experienciaS.borrar(id).subscribe(
-          
-          data => {
-            this.cargarExperiencia();
-            Notify.success('¡Operación exitosa!');
-        Loading.remove();
+      () => {
+        if (id != undefined) {
+          this.experienciaS.borrar(id).subscribe(
 
-          }, err => {
-            Notify.failure('¡Ups! Algo salió mal');
-        Loading.remove();
+            data => {
+              this.cargarExperiencia();
+              Notify.success('¡Operación exitosa!');
+              Loading.remove();
 
-          }
-        )
-      }
+            }, err => {
+              Notify.failure('¡Ups! Algo salió mal');
+              Loading.remove();
+
+            }
+          )
+        }
       },
       () => {
         Loading.remove();
-      
-      },
-      {
-      },
-      );
-   
+
+      }, {},
+    );
+
   }
 }

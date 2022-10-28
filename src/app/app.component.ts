@@ -15,4 +15,8 @@ export class AppComponent {
     window.addEventListener('load', AOS.refresh);
   }
 
+  
+
+
+
 }

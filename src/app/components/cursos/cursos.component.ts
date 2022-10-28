@@ -24,7 +24,6 @@ export class CursosComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
-    console.log(this.cursos);
   }
 
 

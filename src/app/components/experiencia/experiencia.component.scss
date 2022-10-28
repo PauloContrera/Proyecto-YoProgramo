@@ -50,6 +50,8 @@
                 }
             }
             .contenido{
+        font-family: 'Roboto', sans-serif;
+
                 display: flex;
                 flex-direction: row;
                 margin: 0em 0em;
@@ -69,6 +71,7 @@
                     }
                 }
                 .contenidoTexto{
+                    
                     margin: 0em 0em 0 1em;
                     .titulo{
                         display: block;
@@ -81,6 +84,7 @@
                         width: 100%;
                         font-size: 20px;
                         height: 30px;
+                        
 
 
                     }

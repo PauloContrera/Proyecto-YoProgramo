@@ -25,7 +25,6 @@ export class IdiomasComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
-    console.log(this.idioma);
   }
   
 

@@ -30,6 +30,9 @@ import { EditarHabilidadComponent } from './components/habilidades/editar-habili
 import { IdiomasComponent } from './components/idiomas/idiomas.component';
 import { NuevoIdiomaComponent } from './components/idiomas/nuevo-idioma/nuevo-idioma.component';
 import { EditarIdiomaComponent } from './components/idiomas/editar-idioma/editar-idioma.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { EditarProyectosComponent } from './components/proyectos/editar-proyectos/editar-proyectos.component';
+import { NuevoProyectosComponent } from './components/proyectos/nuevo-proyectos/nuevo-proyectos.component';
 
 
 @NgModule({
@@ -56,7 +59,10 @@ import { EditarIdiomaComponent } from './components/idiomas/editar-idioma/editar
     EditarHabilidadComponent,
     IdiomasComponent,
     NuevoIdiomaComponent,
-    EditarIdiomaComponent
+    EditarIdiomaComponent,
+    ProyectosComponent,
+    EditarProyectosComponent,
+    NuevoProyectosComponent
   ],
   imports: [
     BrowserModule,

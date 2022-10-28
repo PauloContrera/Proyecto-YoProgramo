@@ -33,7 +33,6 @@ export class HabilidadesComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
-    console.log(this.habilidades);
   }
   
 

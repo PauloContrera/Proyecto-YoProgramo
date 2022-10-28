@@ -1,19 +1,19 @@
 import {  Component,  OnInit} from '@angular/core';
-import {  Educacion} from 'src/app/model/educacion';
+import {  Proyectos} from 'src/app/model/proyectos';
 import {  TokenService} from 'src/app/service/token.service';
-import {  EducacionService} from 'src/app/service/educacion.service';
+import {  ProyectosService} from 'src/app/service/proyectos.service';
 import {  Confirm,  Loading,  Notify} from 'notiflix';
 
 @Component({
-  selector: 'app-educacion',
-  templateUrl: './educacion.component.html',
-  styleUrls: ['./educacion.component.scss']
+  selector: 'app-proyectos',
+  templateUrl: './proyectos.component.html',
+  styleUrls: ['./proyectos.component.scss']
 })
-export class EducacionComponent implements OnInit {
+export class ProyectosComponent implements OnInit {
 
-  educacion: Educacion[] = [];
+  proyectos: Proyectos[] = [];
 
-  constructor(private educacionS: EducacionService, private tokenService: TokenService) {}
+  constructor(private proyectosS: ProyectosService, private tokenService: TokenService) {}
 
   isLogged = false;
 
@@ -28,8 +28,8 @@ export class EducacionComponent implements OnInit {
 
 
   cargarExperiencia(): void {
-    this.educacionS.lista().subscribe(data => {
-      this.educacion = data;
+    this.proyectosS.lista().subscribe(data => {
+      this.proyectos = data;
     })
   }
 
@@ -43,7 +43,7 @@ export class EducacionComponent implements OnInit {
       'No',
       () => {
         if (id != undefined) {
-          this.educacionS.borrar(id).subscribe(
+          this.proyectosS.borrar(id).subscribe(
 
             data => {
               this.cargarExperiencia();
@@ -60,6 +60,7 @@ export class EducacionComponent implements OnInit {
       },
       () => {
         Loading.remove();
+        console.log(this.proyectos)
 
       }, {},
     );

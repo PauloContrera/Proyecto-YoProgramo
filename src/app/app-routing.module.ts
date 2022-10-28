@@ -13,6 +13,8 @@ import {HomeComponent} from './components/home/home.component'
 import { EditarIdiomaComponent } from './components/idiomas/editar-idioma/editar-idioma.component';
 import { NuevoIdiomaComponent } from './components/idiomas/nuevo-idioma/nuevo-idioma.component';
 import { LoginComponent } from './components/login/login.component';
+import { EditarProyectosComponent } from './components/proyectos/editar-proyectos/editar-proyectos.component';
+import { NuevoProyectosComponent } from './components/proyectos/nuevo-proyectos/nuevo-proyectos.component';
 
 
 const routes: Routes = [
@@ -23,11 +25,13 @@ const routes: Routes = [
   { path: 'nuevaHabilidad', component: NuevaHabilidadComponent},
   { path: 'nuevoIdiomas', component: NuevoIdiomaComponent},
   { path: 'nuevoCurso', component: NuevoCursosComponent},
+  { path: 'nuevoProyecto', component: NuevoProyectosComponent},
   { path: 'editexp/:id', component: EditarExperienciaComponent},
   { path: 'editarEducacion/:id', component: EditarEducacionComponent},
   { path: 'editarHabilidad/:id', component: EditarHabilidadComponent},
   { path: 'editarIdioma/:id', component: EditarIdiomaComponent},
   { path: 'editarCursos/:id', component: EditarCursosComponent},
+  { path: 'editarProyecto/:id', component: EditarProyectosComponent},
   { path: 'ediAcerca/:id', component: EditarAcercaDeComponent},
   
 ];
