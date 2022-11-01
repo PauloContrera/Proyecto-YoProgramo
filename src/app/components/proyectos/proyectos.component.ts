@@ -3,6 +3,7 @@ import {  Proyectos} from 'src/app/model/proyectos';
 import {  TokenService} from 'src/app/service/token.service';
 import {  ProyectosService} from 'src/app/service/proyectos.service';
 import {  Confirm,  Loading,  Notify} from 'notiflix';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-proyectos',
@@ -24,6 +25,9 @@ export class ProyectosComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    
+    AOS.init();
+    window.addEventListener('load', AOS.refresh);
   }
 
 

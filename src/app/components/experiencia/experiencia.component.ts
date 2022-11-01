@@ -3,6 +3,7 @@ import { Experiencia } from 'src/app/model/experiencia';
 import { TokenService } from 'src/app/service/token.service';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 import { Confirm, Loading, Notify } from 'notiflix';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-experiencia',
@@ -24,6 +25,9 @@ export class ExperienciaComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    
+    AOS.init();
+    window.addEventListener('load', AOS.refresh);
   }
 
 

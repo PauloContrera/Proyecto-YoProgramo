@@ -3,6 +3,7 @@ import { Habilidades } from 'src/app/model/habilidades';
 import { TokenService } from 'src/app/service/token.service';
 import { HabilidadesService } from 'src/app/service/habilidades.service';
 import { Confirm, Loading, Notify } from 'notiflix';
+import * as AOS from 'aos';
 
 // import Swiper core and required modules
 import SwiperCore, { EffectCoverflow, Pagination, Autoplay, Navigation  } from "swiper";
@@ -33,6 +34,9 @@ export class HabilidadesComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    
+    AOS.init();
+    window.addEventListener('load', AOS.refresh);
   }
   
 

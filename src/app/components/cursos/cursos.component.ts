@@ -3,6 +3,7 @@ import {  Cursos} from 'src/app/model/cursos';
 import {  TokenService} from 'src/app/service/token.service';
 import {  CursosService} from 'src/app/service/cursos.service';
 import {  Confirm,  Loading,  Notify} from 'notiflix';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-cursos',
@@ -24,6 +25,9 @@ export class CursosComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    
+    AOS.init();
+    window.addEventListener('load', AOS.refresh);
   }
 
 

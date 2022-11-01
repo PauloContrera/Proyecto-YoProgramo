@@ -3,6 +3,7 @@ import {  Educacion} from 'src/app/model/educacion';
 import {  TokenService} from 'src/app/service/token.service';
 import {  EducacionService} from 'src/app/service/educacion.service';
 import {  Confirm,  Loading,  Notify} from 'notiflix';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-educacion',
@@ -24,6 +25,9 @@ export class EducacionComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    
+    AOS.init();
+    window.addEventListener('load', AOS.refresh);
   }
 
 

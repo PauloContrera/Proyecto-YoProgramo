@@ -3,6 +3,7 @@ import { Idioma } from 'src/app/model/idioma';
 import { TokenService } from 'src/app/service/token.service';
 import { IdiomasService } from 'src/app/service/idiomas.service';
 import { Confirm, Loading, Notify } from 'notiflix';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-idiomas',
@@ -25,6 +26,9 @@ export class IdiomasComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
+    
+    AOS.init();
+    window.addEventListener('load', AOS.refresh);
   }
   
 
