@@ -1,22 +1,11 @@
 <div class="proyectos-total">
     <div class="titulo">
       <h2>Proyecto</h2>
-  <button type="button" routerLink="/nuevoProyecto" *ngIf="isLogged">
-    <img src="../../../assets/logos/agregar.png" alt="">
-  </button>
+
     </div>
   <div class="proyectos">
     <div class="contenido-total" *ngFor="let Proyecto of proyectos">
-          <div class="menu">
-            <td *ngIf="isLogged">
-              <button routerLink="/editarProyecto/{{Proyecto.id}}">
-                <img src="../../../assets/logos/editar.png" alt=""></button>
-            </td>
-            <td *ngIf="isLogged">
-              <button (click)="delete(Proyecto.id)">
-                <img src="../../../assets/logos/borrar.png" alt=""></button>
-            </td>
-          </div>
+          
           <div class="contenido" data-aos="fade-up">
 
             

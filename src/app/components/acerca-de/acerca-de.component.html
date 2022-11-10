@@ -1,20 +1,18 @@
 <div class="acerca-de-mi">
   <div class="titulo">
     <h2>Acerca de mi</h2>
-    <button *ngIf="isLogged"  routerLink="/ediAcerca/1">
-      <img src="../../../assets/logos/editar.png" alt="">
-    </button>
+  
   </div>
 
-  <div class="principal" data-aos="fade-down">
+  <div class="principal" data-aos="fade-down" *ngFor="let acerca of acercade">
     <div class="foto">
-      <img src="{{persona.img}}">
+      <img src="{{acerca.img}}">
     </div>
     <div class="texto">
-      <p class="nombre">{{persona.nombre}}</p>
+      <p class="nombre">{{acerca.nombre}}</p>
       <div class="texto-extra">
-        <p>{{persona.texto}}</p>
-      <p>{{persona.texto2}}</p>
+        <p>{{acerca.texto}}</p>
+      <p>{{acerca.texto2}}</p>
       <p>Full Stack Developer Jr</p>
       </div>
     </div>

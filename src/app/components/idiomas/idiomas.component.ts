@@ -1,8 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Idioma } from 'src/app/model/idioma';
-import { TokenService } from 'src/app/service/token.service';
-import { IdiomasService } from 'src/app/service/idiomas.service';
-import { Confirm, Loading, Notify } from 'notiflix';
+import { Idiomas } from 'src/app/database/Idiomas';
 import * as AOS from 'aos';
 
 @Component({
@@ -13,60 +10,15 @@ import * as AOS from 'aos';
 export class IdiomasComponent implements OnInit {
 
   
-  idioma: Idioma[] = [];
+  idioma=Idiomas;
 
-  constructor(private idiomasS: IdiomasService, private tokenService: TokenService) { }
-
-  isLogged = false;
 
   ngOnInit(): void {
-    this.cargarExperiencia();
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-    } else {
-      this.isLogged = false;
-    }
+    
     
     AOS.init();
     window.addEventListener('load', AOS.refresh);
   }
   
 
-  cargarExperiencia(): void {
-    this.idiomasS.lista().subscribe(data => { this.idioma = data; })
-  }
-
-  delete(id?: number){
-    Loading.standard('Cargando...');
-    
-    Confirm.show(
-      '¡Advertencia!',
-      'Desea borrar este componente',
-      'Si',
-      'No',
-      () => { if(id != undefined){
-        this.idiomasS.borrar(id).subscribe(
-          
-          data => {
-            this.cargarExperiencia();
-            Notify.success('¡Operación exitosa!');
-        Loading.remove();
-
-          }, err => {
-            Notify.failure('¡Ups! Algo salió mal');
-        Loading.remove();
-
-          }
-        )
-      }
-      },
-      () => {
-        Loading.remove();
-      
-      },
-      {
-      },
-      );
-   
-  }
 }

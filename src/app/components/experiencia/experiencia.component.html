@@ -1,24 +1,13 @@
 <div class="experiencia">
     <div class="titulo">
       <h2>Experiencia laboral</h2>
-  <button type="button" routerLink="/nuevaexp" *ngIf="isLogged">
-    <img src="../../../assets/logos/agregar.png" alt="">
-  </button>
+  
     </div>
   <div>
     <table class="table">
       <tbody>
-        <tr class="tabla" *ngFor="let Experiencia of experiencia">
-          <div class="menu">
-            <td *ngIf="isLogged">
-              <button routerLink="/editexp/{{Experiencia.id}}">
-                <img src="../../../assets/logos/editar.png" alt=""></button>
-            </td>
-            <td *ngIf="isLogged">
-              <button (click)="delete(Experiencia.id)">
-                <img src="../../../assets/logos/borrar.png" alt=""></button>
-            </td>
-          </div>
+        <tr class="tabla" *ngFor="let Experiencia of exper">
+          
           <div class="contenido" data-aos="fade-down">
             <div class="contenido-imagen">
             <img src="{{Experiencia.img}}" alt="">

@@ -1,24 +1,12 @@
 <div class="experiencia">
   <div class="titulo">
     <h2>Educacion</h2>
-<button type="button" routerLink="/nuevaEducacion" *ngIf="isLogged">
-  <img src="../../../assets/logos/agregar.png" alt="">
-</button>
   </div>
 <div>
   <table class="table">
     <tbody>
       <tr class="tabla" *ngFor="let Educacion of educacion">
-        <div class="menu">
-          <td *ngIf="isLogged">
-            <button routerLink="/editarEducacion/{{Educacion.id}}">
-              <img src="../../../assets/logos/editar.png" alt=""></button>
-          </td>
-          <td *ngIf="isLogged">
-            <button (click)="delete(Educacion.id)">
-              <img src="../../../assets/logos/borrar.png" alt=""></button>
-          </td>
-        </div>
+        
         <div class="contenido" data-aos="fade-down">
           <div class="contenido-imagen">
           <img src="{{Educacion.img}}" alt="">

@@ -1,9 +1,7 @@
 <div class="habilidades-totales">
   <div class="titulo">
     <h2>Habilidades</h2>
-  <button type="button" routerLink="/nuevaHabilidad" *ngIf="isLogged">
-  <img src="../../../assets/logos/agregar.png" alt="">
-  </button>
+
   </div>
   
   <div class="habilidades" data-aos="fade-up">
@@ -23,16 +21,7 @@
             clickable: true
           }" class="mySwiper">
       <ng-template swiperSlide *ngFor="let habilidad of habilidades">
-        <div class="apilar"><div class="menu">
-          <td *ngIf="isLogged">
-            <button routerLink="/editarHabilidad/{{habilidad.id}}">
-              <img src="../../../assets/logos/editar.png" alt=""></button>
-          </td>
-          <td *ngIf="isLogged">
-            <button (click)="delete(habilidad.id)">
-              <img src="../../../assets/logos/borrar.png" alt=""></button>
-          </td>
-        </div>
+        <div class="apilar">
           <img src="{{habilidad.img}}" alt="">
           <span class="text">{{habilidad.nombre}}</span>
         </div>

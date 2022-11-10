@@ -1,24 +1,13 @@
 <div class="idiomas-totales">
     <div class="titulo">
       <h2>Idiomas</h2>
-    <button type="button" routerLink="/nuevoIdiomas" *ngIf="isLogged">
-    <img src="../../../assets/logos/agregar.png" alt="">
-    </button>
+  
     </div>
     
     <div class="idiomas" >
      
         <div class="contenido-circulos" *ngFor="let idiom of idioma">
-            <div class="menu">
-                <td *ngIf="isLogged">
-                  <button routerLink="/editarIdioma/{{idiom.id}}">
-                    <img src="../../../assets/logos/editar.png" alt=""></button>
-                </td>
-                <td *ngIf="isLogged">
-                  <button (click)="delete(idiom.id)">
-                    <img src="../../../assets/logos/borrar.png" alt=""></button>
-                </td>
-              </div>
+           
               <div class="circulos" data-aos="fade-up">
                 <circle-progress 
                 [percent]="(idiom.valor)" 
