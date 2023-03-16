@@ -1,46 +1,79 @@
-<div class="experiencia">
+<section  class="experiencia">
   <div class="titulo">
     <h2>Cursos</h2>
-<button type="button" routerLink="/nuevoCurso" *ngIf="isLogged">
-  <img src="../../../assets/logos/agregar.png" alt="">
-</button>
   </div>
-<div>
-  <table class="table">
-    <tbody>
-      <tr class="tabla" *ngFor="let Curso of cursos">
-        <div class="contenido" data-aos="fade-down">
-          <div class="contenido-imagen">
-          <img src="{{Curso.img}}" alt="">
-          </div>
-          <div class="contenidoTexto">
-            <h3 class="titulo">
-              {{Curso.nombre}}
-            </h3>
-            <h4 class="texto">
-              {{Curso.texto}}
-            </h4>
-            <div class="fechas">
-              {{Curso.desde}}
-              <p>-</p>
-              {{Curso.hasta}}
+  <div>
+    <table class="table">
+      <tbody>
+        <tr class="tabla">
+          <td class="contenido" data-aos="fade-down">
+            <div class="contenido-imagen">
+              <img src="../../../assets/experiencias/links.png" alt="Logo Links English Institute">
             </div>
-            <h5 class="lugar">
-              {{Curso.lugar}}
-            </h5>
-
-          </div>
-
-
-        </div>
-      </tr>
-
-
-
-
-
-    </tbody>
-  </table>
-</div>
-
-</div>
+            <div class="contenidoTexto">
+              <h3 class="titulo">
+                Links English Institute
+              </h3>
+              <h4 class="texto">
+                Inglés Intensivo
+              </h4>
+              <div class="fechas">
+                2021
+                <p>-</p>
+                Actualidad
+              </div>
+             
+              <h5 class="lugar">
+                San Martín, Mendoza, Argentina
+              </h5>
+            </div>
+          </td>
+        </tr>
+        <tr class="tabla">
+          <td class="contenido" data-aos="fade-down">
+            <div class="contenido-imagen">
+              <img src="../../../assets/experiencias/argentinaprograma.png" alt="Logo de ArgentinaPrograma ">
+            </div>
+            <div class="contenidoTexto">
+              <h3 class="titulo">
+                #SeProgramar y #YoProgramo
+              </h3>
+              <h4 class="texto">
+                Programación
+              </h4>
+              <div class="fechas">
+                2021
+                <p>-</p>
+                2022
+              </div>
+              <h5 class="lugar">
+                Virtual
+              </h5>
+            </div>
+          </td>
+        </tr>
+        <tr class="tabla">
+          <td class="contenido" data-aos="fade-down">
+            <div class="contenido-imagen">
+              <img src="../../../assets/experiencias/google.jpg" alt="Logo Google Actívate">
+            </div>
+            <div class="contenidoTexto">
+              <h3 class="titulo">
+                Introducción al desarrollo web 2/2
+              </h3>
+              <h4 class="texto">
+                Programación
+              </h4>
+              <div class="fechas">
+                2020
+              </div>
+              <h5 class="lugar">
+                Virtual
+              </h5>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Habilidades } from 'src/app/database/Habilidades';
 import * as AOS from 'aos';
 
 // import Swiper core and required modules
@@ -18,9 +17,7 @@ SwiperCore.use([EffectCoverflow, Pagination,Autoplay, Pagination, Navigation]);
 })
 export class HabilidadesComponent implements OnInit {
 
-  habilidades=Habilidades;
-
-  
+ 
   ngOnInit(): void {
     
     

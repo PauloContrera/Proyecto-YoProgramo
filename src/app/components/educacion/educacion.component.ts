@@ -1,6 +1,5 @@
 import {  Component,  OnInit} from '@angular/core';
 import * as AOS from 'aos';
-import {Educacion} from 'src/app/database/Educacion'
 
 @Component({
   selector: 'app-educacion',
@@ -9,7 +8,6 @@ import {Educacion} from 'src/app/database/Educacion'
 })
 export class EducacionComponent implements OnInit {
 
-  educacion= Educacion;
 
   ngOnInit(): void {
     

@@ -1,6 +1,5 @@
 import {  Component,  OnInit} from '@angular/core';
 import * as AOS from 'aos';
-import {Cursos} from 'src/app/database/Cursos';
 
 @Component({
   selector: 'app-cursos',
@@ -9,10 +8,7 @@ import {Cursos} from 'src/app/database/Cursos';
 })
 export class CursosComponent implements OnInit {
 
-  cursos=Cursos;
-
-  isLogged = false;
-
+  
   ngOnInit(): void {
     
     AOS.init();

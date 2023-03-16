@@ -1,20 +1,19 @@
-<div class="acerca-de-mi">
+<section class="acerca-de-mi" itemscope itemtype="https://schema.org/Person">
   <div class="titulo">
-    <h2>Acerca de mi</h2>
-  
+    <h2>Acerca de mí</h2>
   </div>
-
-  <div class="principal" data-aos="fade-down" *ngFor="let acerca of acercade">
-    <div class="foto">
-      <img src="{{acerca.img}}">
-    </div>
+  <div class="principal" data-aos="fade-down">
+    <figure class="foto">
+      <img src="../../../assets/foto paulo contrera.jpeg" alt="Foto de Paulo Contrera" itemprop="image">
+    </figure>
     <div class="texto">
-      <p class="nombre">{{acerca.nombre}}</p>
-      <div class="texto-extra">
-        <p>{{acerca.texto}}</p>
-      <p>{{acerca.texto2}}</p>
-      <p>Full Stack Developer Jr</p>
+      <h3 class="nombre" itemprop="name">Paulo Alejandro Contrera Gosp</h3>
+      <div class="texto-extra" itemprop="description">
+        <p>Estudiante avanzado de Ingeniería electrónica y técnico electricista con experiencia en programación web y sistemas embebidos.</p>
+        <p>Habilidades en programación y bases de datos, experiencia en control de versiones con Git y trabajé en SyGSeguros, Cervecería Quilmes y Bodega Grupo Peñaflor.</p>
+        <p>En busca de nuevas oportunidades laborales.</p>
       </div>
     </div>
   </div>
-</div>
+</section>
+

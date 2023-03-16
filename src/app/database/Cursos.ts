@@ -7,7 +7,7 @@ export const Cursos = [
         "desde": "2021",
         "hasta": "Actualidad",
         "texto": "Ingles Intensivo ",
-        "img": "https://www.paulo-contrera.com/src/images/experiencias/links.png"
+        "img": "src/images/experiencias/links.png"
     },
     {
         "id": 2,

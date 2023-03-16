@@ -1,0 +1,550 @@
+*{margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+    }
+  body{
+      box-sizing: border-box; 
+
+  }
+
+  a{
+      text-decoration: none;
+      color: black;
+  }
+  /* font-family: 'Open Sans', sans-serif; TITULO;
+  font-family: 'Orbitron', sans-serif NONBRE;
+  font-family: 'Roboto', sans-serif;  PARRAFOS*/
+.padre{
+    display: flex; /*activamos flex, para todo*/
+    flex-flow:column nowrap; /*Visualizamos con columnas y nowrap para que se adapte */
+    background-color: #f0ffff;
+}
+.arriba{
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #fdbd22;
+    height: auto;
+}
+    .titulo{
+        flex: 3 1 auto;
+        align-items: center;
+        margin: 10px;
+    }
+            .nombre h1{
+                display: inline;
+            }
+        .nav{
+            height: auto;
+            justify-content: center;
+            flex-flow: row;
+             display: flex;
+             justify-content: flex-start;
+        }
+        .nav :hover{
+            background-color: #be9344d5;
+        }
+        .redes :hover{
+            background-color: #be9344d5;
+        }
+            .nav a{
+                display: flex !important;
+                display: inline-block;
+                align-items: center;
+                height: 30px;
+                /* width: 13%; */
+                min-width: 150px;
+                font-size: 20px;
+                background-color: #FEDA84;
+                text-align: start;
+                color: #0D1E6E	;
+                border: 1px solid rgba(0, 0, 0, 0.438);
+            }
+            .nav a img{
+                height: 18px;
+            }
+    .GrillaInicio{
+        padding: 4em 1em 6em 1em;
+        display: grid;
+        grid-template-columns:400px 45%;
+        justify-content: space-around;
+    }
+        .GrillaInicio-Datos{
+            background-color: #d68410;
+            display: grid;
+            border-radius: 1em;
+            box-shadow: 1px 1px 15px 1px black;
+            min-width: 400px;
+        }
+            .foto{
+                margin-top: 0.5em;
+                display: grid;
+                justify-content: center;
+            }
+            .foto img{
+                height: 8em;
+                border-radius: 1em;
+            }
+            .nombre{
+                display: grid ;
+                justify-content: space-around;
+                font-size: 1.2em;
+                font-family: 'Orbitron', sans-serif;
+                /* border: 2px solid #2c393d; */
+                border-radius: 1em;
+                /* background-color: #285c72; */
+                color: #2c393d;
+                /* backdrop-filter: blur(90px); */
+                min-width: 400px;
+            }
+            .piefoto{
+                padding: 1.3em;
+                padding-bottom: 25px;
+                /* text-align: justify; */
+                font-family: 'Roboto', sans-serif;
+            }
+            .redes{
+                display: flex;
+                flex-flow: nowrap;
+                align-items: center;
+                justify-content: space-around;
+                padding-bottom: 15px;
+            }
+            .redes img{
+               height: 40px;
+              width: 40px;
+            }
+
+        .GrillaInicio-navegacion{
+            display: grid;
+            grid-template-columns: 100%,100%,100%;
+            /* grid-template-rows: minmax(20px,80px); */
+            margin-top: 5em;
+            margin-left: 3em;
+            height: 2px;
+            font-family: 'Roboto', sans-serif;
+            min-width: 200px;
+        }
+        .GrillaInicio-navegacion-aux{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: minmax(20px,4em);
+            
+        }
+        .GrillaInicio-navegacion-aux2{
+            display: grid;
+            grid-template-rows: minmax(20px,4em);
+        }
+        .botones{
+            display: flex;
+            background-color: hsl(35, 86%, 45%);
+            border: 3px solid rgba(0, 0, 0, 0.438);
+            align-items: center;
+            justify-content: center;
+            box-shadow: 1px 1px 15px 1px black;
+            
+            border-radius: 0.5em;
+        }
+        .botones:hover{
+            background-color: #d68310a1;
+        }
+
+
+
+    .fondo{
+        margin: 0px;
+        padding: 0px;
+        /* height: 100%; */
+        /* width: 100%; */
+       
+      
+      background: #ADA996;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #ebebebcc, hsla(0, 0%, 86%, 0.8), hsla(0, 0%, 95%, 0.8), hsla(50, 12%, 63%, 0.8));  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right,  hsla(0, 0%, 92%, 0.8), hsla(0, 0%, 86%, 0.8), hsla(0, 0%, 95%, 0.8), hsla(50, 12%, 63%, 0.8)), url("../images/placa-vectorizada.svg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   
+
+        background-size: cover;
+        background-attachment: fixed;
+        /* Background-color: transparent; */
+        background-repeat: no-repeat ;
+        /* background-repeat: repeat-x; */
+        background-position: 0 0;
+        overflow:hidden;
+
+    }
+
+    .wave{
+        /* position: absolute; */
+        /* bottom: 0%; */
+        width: 100%;
+    }
+
+.sobre-mi{
+    display: grid;
+grid-template-columns: 30% 30%;
+justify-content: space-around;
+}
+.sobre-mi-color{
+background-color: #d58310;
+padding: 1em 0px;
+}
+    .sobre-mi-color h2{
+        color: black;
+        margin-bottom: 0.5em;
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Open Sans', sans-serif;
+    }
+        table{
+            font-family: 'Roboto', sans-serif;
+            border-spacing: 5px;
+            font-size: 1.2em;
+            max-width: 500px;
+        }
+        /* .pregunta {
+            
+        }
+        .respuesta{
+                       
+        } */
+     .sobre-mi-info{
+        font-family: 'Roboto', sans-serif;
+     }
+        .sobre-mi-info h3{
+            font-family: 'Roboto', sans-serif;
+         font-size: 25px;
+         padding-bottom: 10px;
+         font-weight: 10;
+        }
+        .sobre-mi-info li{
+            padding-left: 1.2em;
+        }
+
+
+.skills{
+display: flex;
+flex-flow: column;
+}
+    .skills h2{
+        font-size: 40px;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .ico-skills-T{
+        display: grid;
+        grid-template-columns: repeat(3, 10%);
+        justify-content: space-around;
+        
+    }
+        .ico-skill{
+            padding: 1em 0em;
+            height: 120px;
+            width: 120px;
+        }
+
+
+.portafolio{
+    text-align: center;
+    padding: 30px 0px;
+}
+    .portafolio h2{
+        font-size: 40px;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 1em;
+    }
+    
+
+.portafolio-gird{
+     display: grid;
+    grid-template-columns: 40em;
+    justify-content: center; 
+    /* width: 40em; */
+    /* margin: 30px 0px; */
+    /* row-gap: 30px; */
+    padding: 0px;
+}
+    .portafolio-individual{
+        font-family: 'Roboto', sans-serif;
+        justify-content: center;
+    }
+        
+        .portafolio-individual img{
+            max-width: 600px;
+            border-radius: 1em;
+            margin-bottom: 1em;
+        }
+        .portafolio-individual h3{
+            font-size: 25px;
+            margin-bottom: 0.7em;
+            font-family: 'Open Sans', sans-serif;
+        }
+.video{
+    margin: 2em 0em 1em 0em;
+    max-width: 560px;
+    height: 315px;
+    width: 100%;
+    /* height: 100%; */
+    
+}
+.portafolio-individual p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: black;
+    text-align: start;
+    text-indent: 18px;
+    padding: 0.2em;
+}
+        .portafolio-individual  iframe{
+            text-align: justify;
+           
+            border-radius: 1em;
+        }
+        
+
+
+.contacto{
+    margin: 2em 0em;
+    font-family: 'Open Sans', sans-serif;
+
+    display: grid;
+    justify-content: center;
+}
+        .contacto form{
+            max-width: 400px;
+            min-width: 100px;
+            margin: 0em 1em;
+            padding: 10px 20px;
+            border: 2px black solid;
+            border-radius: 1em;
+            
+        }
+        .contacto h2{
+            margin-bottom: 0.5em;
+            font-size: 40px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+    
+        .contacto input, textarea{
+            width: 100%;
+            margin: 10px 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+        }
+        .contacto textarea{
+            min-height: 100px;
+            max-height: 200px;
+            max-width: 100%;
+            min-width: 100%;
+        }
+    
+        #boton{
+            background: #d58310;
+            color: #000;
+        }
+        #boton:hover{
+            cursor: pointer;
+        }
+
+
+.pie{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #d58310;
+    font-family: 'Roboto', sans-serif;
+}
+    .pie p{
+        margin: 1em 1em;
+        font-size: 1em ;
+        text-align: center;
+    }
+    .pie img{
+        padding-bottom: 1em;
+    }
+
+
+@media screen and (max-width: 1040px)
+{
+    .sobre-mi{
+    grid-template-columns: 40% 40%;
+    }
+}
+@media screen and (max-width: 880px)
+{
+    .GrillaInicio{
+        display: grid;
+        grid-template-columns:400px 40%;
+        
+    }
+    .sobre-mi{
+    grid-template-columns: 50% 40%;
+    justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    
+    .contacto h2,.skills h2, .sobre-mi-color h2.portafolio h2{
+        font-size: 40px;
+    }
+    .portafolio-individual h3{
+        font-size: 20px;
+        
+    }
+    .GrillaInicio{
+        grid-template-columns: 100%;
+    }
+    .GrillaInicio-Datos{
+        margin: 0px 5em;
+    }
+    
+    .GrillaInicio-navegacion{
+        grid-template-columns: 100%;
+        margin-left: 0em;
+        padding: 1em 1em 10em 1em;
+    }
+    
+    .sobre-mi{
+        display: grid;
+        grid-template-columns: 70%;
+    }
+    .sobre-mi-info h3{
+        margin-top: 1.5em;
+        }
+    .pregunta{
+        max-width: 150px;
+        }
+        .portafolio-individual img{
+            max-width: 100%;
+     
+        }
+        .portafolio-individual p{
+            font-size: 1em;
+        }
+    .portafolio-gird{
+        display: grid;
+        grid-template-columns: 70%;
+    }
+    .ico-skills-T{
+        grid-template-columns: repeat(2, 10%);  
+    }
+    .video{
+        max-height: 250px;     
+    }
+}
+@media screen and (max-width: 580px)
+{
+    .GrillaInicio-Datos{
+        margin: 0px 2.5em;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .contacto h2,.skills h2, .sobre-mi-color h2 .portafolio h2{
+        font-size: 30px;
+    }
+    
+    .GrillaInicio-Datos{
+        margin: 0px 0em;
+    }
+    .sobre-mi{
+        grid-template-columns: 90%;
+    }
+    .ico-skills-T{
+        grid-template-columns: repeat(2, 20%);  
+    }
+    .ico-skill{
+        padding: 0.5em 0em;
+        height: 80px;
+        width: 80px;
+    }
+    .pie{
+        font-size: 0.9em;
+    }
+    .pie img{
+        height: 30px;
+    }
+}
+@media screen and (max-width: 430px)
+{
+    .GrillaInicio-Datos{
+        margin: 0px 0em;
+        min-width: 280px;
+    }
+    .nombre{
+        font-size: 1em;
+        min-width: 280px;
+    }
+    .piefoto{
+        font-size: 1em;
+        padding: 1em;
+    }
+    
+    table{
+        font-size: 1em;
+    }
+    .sobre-mi-info h3{
+    margin-top: 1.5em;
+    font-size: 1.2em;
+    }
+    .portafolio-individual p{
+        font-size: 0.85em;
+    }
+    .video{
+        max-height: 200px;     
+    }
+
+    
+}
+@media screen and (max-width: 310px)
+{
+    .GrillaInicio-Datos{
+        margin: 0px 0em;
+        min-width: 200px;
+    }
+    .foto img{
+        height: 7em;
+    }
+    .nombre{
+        font-size: 0.7em;
+        min-width: 200px;
+    }
+    .piefoto{
+        font-size: 0.7em;
+        padding: 1em;
+    }
+    .redes img{
+        height: 30px;
+       width: 30px;
+     }
+
+    .GrillaInicio-navegacion{
+        padding: 1em 0em 10em 0em;
+    }
+    table{
+        font-size: 0.7em;
+    }
+    .sobre-mi-info h3{
+    margin-top: 1.5em;
+    font-size: 1.2em;
+    }
+    .sobre-mi-info li{
+        font-size: 0.7em;
+        }
+        .portafolio-individual p{
+            font-size: 0.7em;
+        }
+    .pie{
+        font-size: 0.7em;
+    }
+    .pie img{
+        height: 20px;
+    }
+    .video{
+        max-height: 150px;     
+    }
+}

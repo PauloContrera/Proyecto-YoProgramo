@@ -1,44 +1,55 @@
-<div class="experiencia">
+<section class="experiencia">
   <div class="titulo">
     <h2>Educacion</h2>
   </div>
-<div>
   <table class="table">
     <tbody>
-      <tr class="tabla" *ngFor="let Educacion of educacion">
-        
-        <div class="contenido" data-aos="fade-down">
-          <div class="contenido-imagen">
-          <img src="{{Educacion.img}}" alt="">
-          </div>
-          <div class="contenidoTexto">
-            <h3 class="titulo">
-              {{Educacion.nombre}}
-            </h3>
-            <h4 class="texto">
-              {{Educacion.texto}}
-            </h4>
-            <div class="fechas">
-              {{Educacion.desde}}
-              <p>-</p>
-              {{Educacion.hasta}}
+      <tr class="tabla">
+        <td>
+          <div class="contenido" data-aos="fade-down">
+            <div class="contenido-imagen">
+              <img src="../../../assets/experiencias/utn.png" alt="Logo UTN FRM">
             </div>
-            <h5 class="lugar">
-              {{Educacion.lugar}}
-            </h5>
-
+            <div class="contenidoTexto">
+              <h3 class="titulo">
+                Ingeniería Electrónica
+              </h3>
+              <h4 class="texto">
+                UTN FRM
+              </h4>
+              <div class="fechas">
+                2016 - Actualidad
+              </div>
+              <h5 class="lugar">
+                Mendoza, Argentina
+              </h5>
+            </div>
           </div>
-
-
-        </div>
+        </td>
       </tr>
-
-
-
-
-
+      <tr class="tabla">
+        <td>
+          <div class="contenido" data-aos="fade-down">
+            <div class="contenido-imagen">
+              <img src="../../../assets/experiencias/arboit.jpeg" alt="Escuela Ing. A. M. Arboit">
+            </div>
+            <div class="contenidoTexto">
+              <h3 class="titulo">
+                Técnico Eléctrico
+              </h3>
+              <h4 class="texto">
+                4-016 Ing. A. M. Arboit
+              </h4>
+              <div class="fechas">
+                2010 - 2015
+              </div>
+              <h5 class="lugar">
+                Junín, Mendoza, Argentina
+              </h5>
+            </div>
+          </div>
+        </td>
+      </tr>
     </tbody>
   </table>
-</div>
-
-</div>
+</section>
