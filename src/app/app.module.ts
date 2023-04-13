@@ -16,10 +16,10 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
-import { SwiperModule } from 'swiper/angular';
 import { IdiomasComponent } from './components/idiomas/idiomas.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
-
+import { SwiperModule } from 'swiper/angular';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -44,8 +44,9 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     FormsModule,
     SwiperModule,
     NgCircleProgressModule.forRoot({}),
+    NgbCarouselModule,
+    SwiperModule,
     
-
   ],
   providers: [
   ],
