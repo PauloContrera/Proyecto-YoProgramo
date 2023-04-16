@@ -34,7 +34,6 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { EditarProyectosComponent } from './components/proyectos/editar-proyectos/editar-proyectos.component';
 import { NuevoProyectosComponent } from './components/proyectos/nuevo-proyectos/nuevo-proyectos.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,13 +64,14 @@ import { NuevoProyectosComponent } from './components/proyectos/nuevo-proyectos/
     NuevoProyectosComponent
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     SwiperModule,
     NgCircleProgressModule.forRoot({}),
-    
+
 
   ],
   providers: [

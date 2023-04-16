@@ -4,12 +4,15 @@ import { TokenService } from 'src/app/service/token.service';
 import { HabilidadesService } from 'src/app/service/habilidades.service';
 import { Confirm, Loading, Notify } from 'notiflix';
 import * as AOS from 'aos';
-
+import { SwiperModule } from 'swiper/angular';
 // import Swiper core and required modules
-import SwiperCore, { EffectCoverflow, Pagination, Autoplay, Navigation  } from "swiper";
+// import SwiperCore, { EffectCoverflow, Pagination, Autoplay, Navigation  } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay, Mousewheel } from 'swiper';
+
+SwiperCore.use([Navigation, Pagination, Autoplay, Mousewheel]);
 
 // install Swiper modules
-SwiperCore.use([EffectCoverflow, Pagination,Autoplay, Pagination, Navigation]);
+// SwiperCore.use([EffectCoverflow, Pagination,Autoplay, Pagination, Navigation]);
 
 
 @Component({
@@ -20,6 +23,9 @@ SwiperCore.use([EffectCoverflow, Pagination,Autoplay, Pagination, Navigation]);
 
 })
 export class HabilidadesComponent implements OnInit {
+
+ 
+
 
   habilidades: Habilidades[] = [];
 

@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  URL: 'https://yoprogramopaulo.herokuapp.com/'
-  // URL: 'http://localhost:8080/'
+  URL: 'https://elaborate-joyann-paulocontrera.koyeb.app/'
+  //URL: 'http://localhost:8080/'
 };
 
 /*
