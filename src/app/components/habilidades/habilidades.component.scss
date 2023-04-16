@@ -1,6 +1,6 @@
-// @import "~swiper/css";
-// @import "~swiper/css/effect-coverflow";
-// @import "~swiper/css/pagination";
+@import "~swiper/css";
+ @import "~swiper/css/effect-coverflow";
+ @import "~swiper/css/pagination";
 
 // /*
 // &Variables*/
@@ -201,55 +201,3 @@
 //   }
 
 
-.logo-carousel {
-  width: 100%;
-  height: 80px; /* Ajustar la altura según tus necesidades */
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-container {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.3s ease-out;
-}
-
-.logo {
-  width: auto;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  margin-right: 20px;
-}
-
-.logo:last-of-type {
-  margin-right: 0;
-}
-
-.logo-tooltip {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  opacity: 0;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 5px;
-  transition: visibility 0s, opacity 0.3s ease;
-  z-index: 1;
-}
-
-.logo-tooltip span {
-  font-weight: bold;
-}
-
-.logo:hover .logo-tooltip {
-  visibility: visible;
-  opacity: 1;
-}
